@@ -1,65 +1,181 @@
-import Image from "next/image";
+import {
+  FaAngular,
+  FaBootstrap,
+  FaDocker,
+  FaGitAlt,
+  FaGithub,
+  FaJava,
+  FaNodeJs,
+  FaReact,
+} from "react-icons/fa";
+import { About } from "./components/About";
+import { Contact } from "./components/Contact";
+import { Education } from "./components/Education";
+import { Footer } from "./components/Footer";
+import { Hero } from "./components/Hero";
+import { Navbar } from "./components/Navbar";
+import { Projects } from "./components/Projects";
+import { Skills } from "./components/Skills";
+import { VscVscode } from "react-icons/vsc";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
+import {
+  SiExpress,
+  SiIntellijidea,
+  SiJavascript,
+  SiMongodb,
+  SiMui,
+  SiMysql,
+  SiPostman,
+  SiSpringboot,
+  SiSwagger,
+  SiTypescript,
+} from "react-icons/si";
+import { DiMsqlServer } from "react-icons/di";
+
+const summary = `Software engineer with a strong full-stack background, building scalable web applications with thoughtful architecture, robust APIs, and polished user experiences. I enjoy turning complex requirements
+   into simple, reliable, and secure products.`;
+
+const skillCategories = [
+  {
+    title: "Programming Languages",
+    items: [
+      { name: "Java", icon: <FaJava /> },
+      { name: "JavaScript", icon: <SiJavascript /> },
+      { name: "TypeScript", icon: <SiTypescript/> },  
+    ],
+  },
+  {
+    title: "Frontend",
+    items: [
+      { name: "React", icon: <FaReact /> },
+      { name: "Next.js", icon: <RiNextjsFill /> },
+      {name:"Angular", icon: <FaAngular />},
+      { name: "Tailwind CSS", icon: <RiTailwindCssFill /> },
+      { name: "Bootstrap", icon: <FaBootstrap /> },
+      {name:"Material UI", icon: <SiMui />},
+    ],
+  },
+  {
+    title: "Backend",
+    items: [
+      { name: "Spring Boot", icon: <SiSpringboot /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "Express.js", icon: <SiExpress /> },
+    ],
+  },
+  {
+    title: "Database",
+    items: [
+      { name: "MySQL", icon: <SiMysql /> },
+      { name: "MSSQL", icon: <DiMsqlServer /> },
+      { name: "MongoDB", icon: <SiMongodb /> },
+    ],
+  },
+  {
+    title: "Tools",
+    items: [
+      { name: "Git", icon: <FaGitAlt /> },
+      { name: "Docker", icon: <FaDocker /> },
+      { name: "GitHub", icon: <FaGithub /> },
+      { name: "VS Code", icon: <VscVscode /> },
+      { name: "Postman", icon: <SiPostman /> },
+      { name: "IntelliJ IDEA", icon: <SiIntellijidea /> },
+      { name: "Swagger", icon: <SiSwagger /> },
+    ],
+  },
+];
+
+const projects = [
+  {
+    title: "Hotel management system",
+    description:
+      "Real-time logistics dashboard with live vehicle telemetry, alerting, and role-based access to reduce downtime and improve delivery SLAs.",
+    tech: ["React", "Spring Boot", "MySQL", "Keycloak", "Docker"],
+    github: "https://github.com/hotel-mgt-dev",
+    // demo: "https://fleettrack-demo.vercel.app",
+  },
+  {
+    title: "Multi-Modal Based Violent Content Detection of YouTube Sinhala Videos ",
+    description:
+      "Team task management tool featuring sprint planning, kanban workflows, and analytics to improve engineering throughput.",
+    tech: ["React", "Spring Boot", "MySQL", "Redis"],
+    github: "https://github.com/SuwanthaDarshana/youtube_comments_analyse",
+    // demo: "https://devtasks.app",
+  },
+  {
+    title: " Sales Web Application",
+    description:
+      "Developed a full-stack sales management system with a React-based frontend and a Spring Boot backend, enabling efficient handling of sales data and user authentication",
+    tech: ["React", "Spring Boot", "MySQL", "MUI"],
+  },
+  {
+    title: " EduLabs – Student Management System",
+    description:
+      "Experience efficiency with our Student Management System. It ensures seamless data management from enrollment to grading. Elevate your institution with this modern and user-friendly solution.",
+    tech: ["Angular", "Spring Boot", "MySQL"],
+    github: "https://github.com/SuwanthaDarshana/2nd-Year-Software-Project",
+  },
+  {
+    title: " Secret Message Web App",
+    description:
+      "It's a secret message display site built with Node.js, MongoDB, and secured with Passport.js. Users can log in with their email and password or simply use their Google account for easy access. You can share your secrets or read messages from other users, making it a fun and interactive space for everyone.",
+    tech: ["Node.js", "MongoDB", "Passport.js", "EJS"],
+    github: "https://github.com/SuwanthaDarshana/Secret",
+  },
+  {
+    title: " Gaming Web UI",
+    description:
+      "Dive into gaming excellence with our sleek and immersive web interface. Trending titles, seamless navigation, and stunning visuals await, enhancing your gaming journey. Elevate your experience with an interface designed for both style and functionality.",
+    tech: ["Figma","JavaScript", "HTML", "CSS"],
+    github: "https://github.com/SuwanthaDarshana/GameDevWeb",
+    demo: "https://suwanthadarshana.github.io/GameDevWeb/#",
+  },
+];
+
+const social = {
+  email: "suwanthadarshana@gmail.com",
+  github: "https://github.com/SuwanthaDarshana",
+  linkedin: "https://www.linkedin.com/in/suwantha-darshana",
+};
+
+const education = [
+  {
+    title: "BSc (Hons) in Information Technology",
+    institution: "University of Moratuwa",
+    period: "2021 - 2025",
+    details: "Focused on full-stack development, distributed systems, and secure software design.",
+  },
+   {
+    title: "Diploma in Cyber Security & Ethical Hacking",
+    institution: "SITC Campus ",
+    period: "2023",
+    details: "Completed a Diploma in Cyber Security, gaining knowledge in networking fundamentals, system security, and cyber risk awareness.",
+  },
+  {
+    title: "G.C.E Advanced Level",
+    institution: "Royal College , Polonnaruwa",
+    period: "2016 - 2018",
+    details: "Completed G.C.E. Advanced Level in the Mathematics Stream.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div className="relative">
+      <Navbar />
+      <main className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-12 xl:px-14">
+        <Hero
+          name="Suwantha Darshana"
+          role="Software Engineer / Full Stack Developer"
+          tagline="I architect and build end-to-end web platforms that balance performance, accessibility, and maintainability—shaping resilient systems that grow with the business."
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        <About summary={summary} />
+        <Education items={education} />
+        <Skills categories={skillCategories} />
+        <Projects projects={projects} />
+        <Contact email={social.email} />
       </main>
+      <Footer {...social} />
     </div>
   );
 }
