@@ -89,7 +89,7 @@ const projects = [
   {
     title: "Hotel management system",
     description:
-      "Real-time logistics dashboard with live vehicle telemetry, alerting, and role-based access to reduce downtime and improve delivery SLAs.",
+      "Developed a full-stack hotel management system using Spring Boot, React, and MySQL to manage bookings, customers, and payments with secure authentication and scalable architecture.",
     tech: ["React", "Spring Boot", "MySQL", "Keycloak", "Docker"],
     github: "https://github.com/hotel-mgt-dev",
     // demo: "https://fleettrack-demo.vercel.app",
