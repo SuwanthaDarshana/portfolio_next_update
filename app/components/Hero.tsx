@@ -3,7 +3,7 @@ import Image from "next/image";
 type HeroProps = {
   name: string;
   role: string;
-  tagline: string;
+  tagline ?: string;
 };
 
 export function Hero({ name, role, tagline }: HeroProps) {

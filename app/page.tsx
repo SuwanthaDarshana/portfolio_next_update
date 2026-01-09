@@ -166,7 +166,7 @@ export default function Home() {
         <Hero
           name="Suwantha Darshana"
           role="Software Engineer / Full Stack Developer"
-          tagline="I architect and build end-to-end web platforms that balance performance, accessibility, and maintainability—shaping resilient systems that grow with the business."
+          // tagline="I architect and build end-to-end web platforms that balance performance, accessibility, and maintainability—shaping resilient systems that grow with the business."
         />
         <About summary={summary} />
         <Education items={education} />
