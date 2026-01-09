@@ -32,8 +32,7 @@ import {
 } from "react-icons/si";
 import { DiMsqlServer } from "react-icons/di";
 
-const summary = `Software engineer with a strong full-stack background, building scalable web applications with thoughtful architecture, robust APIs, and polished user experiences. I enjoy turning complex requirements
-   into simple, reliable, and secure products.`;
+const summary = `I am a motivated and detail-oriented software engineer with hands-on industry experience working on real-world applications. I enjoy problem-solving, writing clean and maintainable code, and collaborating effectively within team environments. I am eager to continue growing professionally and contribute to meaningful projects that create real value.`;
 
 const skillCategories = [
   {
