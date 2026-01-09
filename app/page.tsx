@@ -97,7 +97,7 @@ const projects = [
   {
     title: "Multi-Modal Based Violent Content Detection of YouTube Sinhala Videos ",
     description:
-      "Team task management tool featuring sprint planning, kanban workflows, and analytics to improve engineering throughput.",
+      "Developed a system to analyze YouTube videos and comments to detect violent content using NLP and transformer-based models, integrating video, audio, and text data for improved classification accuracy.",
     tech: ["React", "Spring Boot", "MySQL"],
     github: "https://github.com/SuwanthaDarshana/youtube_comments_analyse",
     // demo: "https://devtasks.app",
