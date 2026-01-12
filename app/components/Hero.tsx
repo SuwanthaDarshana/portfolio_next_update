@@ -33,7 +33,7 @@ export function Hero({ name, role, tagline }: HeroProps) {
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
             <a
-              href="/cv.pdf"
+              href="/Suwantha_Darshana_SE.pdf"
               download
               className="inline-flex items-center justify-center gap-2 rounded-full bg-teal-400 px-6 py-3 text-sm font-semibold text-slate-900 shadow-lg shadow-teal-500/30 transition hover:-translate-y-0.5 hover:bg-teal-300"
             >
