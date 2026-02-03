@@ -79,8 +79,8 @@ export function Contact({ email }: ContactProps) {
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-10">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-baseline sm:justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-200">Contact</p>
-            <h2 className="text-3xl font-semibold text-white sm:text-4xl">Let&apos;s build together</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-600 dark:text-teal-200">Contact</p>
+            <h2 className="text-3xl font-semibold text-slate-900 dark:text-white sm:text-4xl">Let&apos;s build together</h2>
           </div>
           <div className="h-px flex-1 bg-linear-to-r from-teal-500/60 to-transparent sm:ml-6" />
         </div>
@@ -88,11 +88,11 @@ export function Contact({ email }: ContactProps) {
         <div className="mt-8">
           <form
             onSubmit={handleSubmit}
-            className="space-y-4 rounded-2xl border border-slate-800/70 bg-slate-900/40 p-6 shadow-lg shadow-black/30"
+            className="space-y-4 rounded-2xl border border-slate-200 dark:border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur-md p-6 shadow-2xl"
           >
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="flex flex-col gap-2">
-                <label htmlFor="name" className="text-sm font-medium text-slate-100">
+                <label htmlFor="name" className="text-sm font-medium text-slate-700 dark:text-slate-100">
                   Name
                 </label>
                 <input
@@ -100,13 +100,13 @@ export function Contact({ email }: ContactProps) {
                   name="name"
                   value={form.name}
                   onChange={(e) => setForm((prev) => ({ ...prev, name: e.target.value }))}
-                  className="w-full rounded-xl border border-slate-800 bg-slate-950 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-teal-400 focus:ring-2 focus:ring-teal-500/30"
+                  className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/5 px-4 py-3 text-sm text-slate-900 dark:text-slate-100 outline-none transition focus:border-teal-400 focus:bg-white/50 dark:focus:bg-white/10 focus:ring-2 focus:ring-teal-500/30"
                   placeholder="Your name"
                   required
                 />
               </div>
               <div className="flex flex-col gap-2">
-                <label htmlFor="email" className="text-sm font-medium text-slate-100">
+                <label htmlFor="email" className="text-sm font-medium text-slate-700 dark:text-slate-100">
                   Email
                 </label>
                 <input
@@ -115,14 +115,14 @@ export function Contact({ email }: ContactProps) {
                   type="email"
                   value={form.email}
                   onChange={(e) => setForm((prev) => ({ ...prev, email: e.target.value }))}
-                  className="w-full rounded-xl border border-slate-800 bg-slate-950 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-teal-400 focus:ring-2 focus:ring-teal-500/30"
+                  className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/5 px-4 py-3 text-sm text-slate-900 dark:text-slate-100 outline-none transition focus:border-teal-400 focus:bg-white/50 dark:focus:bg-white/10 focus:ring-2 focus:ring-teal-500/30"
                   placeholder="you@example.com"
                   required
                 />
               </div>
             </div>
             <div className="flex flex-col gap-2">
-              <label htmlFor="message" className="text-sm font-medium text-slate-100">
+              <label htmlFor="message" className="text-sm font-medium text-slate-700 dark:text-slate-100">
                 Message
               </label>
               <textarea
@@ -130,7 +130,7 @@ export function Contact({ email }: ContactProps) {
                 name="message"
                 value={form.message}
                 onChange={(e) => setForm((prev) => ({ ...prev, message: e.target.value }))}
-                className="min-h-40 w-full rounded-xl border border-slate-800 bg-slate-950 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-teal-400 focus:ring-2 focus:ring-teal-500/30"
+                className="min-h-40 w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/5 px-4 py-3 text-sm text-slate-900 dark:text-slate-100 outline-none transition focus:border-teal-400 focus:bg-white/50 dark:focus:bg-white/10 focus:ring-2 focus:ring-teal-500/30"
                 placeholder="Tell me about your project or idea."
                 required
               />

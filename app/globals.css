@@ -1,8 +1,29 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #0b1220;
-  --foreground: #e2e8f0;
+  --background: #ffffff;
+  --foreground: #0f172a;
+
+  /* Glassmorphism variables for Light Mode */
+  --glass-bg: rgba(0, 0, 0, 0.03);
+  --glass-border: rgba(0, 0, 0, 0.05);
+  --glass-hover-bg: rgba(0, 0, 0, 0.06);
+
+  color-scheme: light;
+}
+
+.dark {
+  --background: #030712;
+  /* Gray 950 */
+  --foreground: #f8fafc;
+  /* Gray 50 */
+
+  /* Glassmorphism variables for Dark Mode */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-hover-bg: rgba(255, 255, 255, 0.1);
+
   color-scheme: dark;
 }
 
@@ -18,12 +39,29 @@
 }
 
 body {
-  background: radial-gradient(circle at 20% 20%, rgba(45, 212, 191, 0.08), transparent 25%),
-    radial-gradient(circle at 80% 0%, rgba(94, 234, 212, 0.06), transparent 25%),
-    linear-gradient(180deg, #0b1220 0%, #070d18 40%, #050a14 100%);
+  background-color: var(--background);
+  /* Default to light mode subtle gradient */
+  background-image:
+    radial-gradient(at 0% 0%, rgba(45, 212, 191, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(56, 189, 248, 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(168, 85, 247, 0.05) 0px, transparent 50%);
+
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
   margin: 0;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+  /* Dark mode deep space gradient */
+  background-image:
+    radial-gradient(at 0% 0%, rgba(45, 212, 191, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(168, 85, 247, 0.15) 0px, transparent 50%);
 }
 
 a {

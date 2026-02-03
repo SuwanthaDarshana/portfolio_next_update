@@ -40,7 +40,7 @@ const skillCategories = [
     items: [
       { name: "Java", icon: <FaJava /> },
       { name: "JavaScript", icon: <SiJavascript /> },
-      { name: "TypeScript", icon: <SiTypescript/> },  
+      { name: "TypeScript", icon: <SiTypescript /> },
     ],
   },
   {
@@ -48,10 +48,10 @@ const skillCategories = [
     items: [
       { name: "React", icon: <FaReact /> },
       { name: "Next.js", icon: <RiNextjsFill /> },
-      {name:"Angular", icon: <FaAngular />},
+      { name: "Angular", icon: <FaAngular /> },
       { name: "Tailwind CSS", icon: <RiTailwindCssFill /> },
       { name: "Bootstrap", icon: <FaBootstrap /> },
-      {name:"Material UI", icon: <SiMui />},
+      { name: "Material UI", icon: <SiMui /> },
     ],
   },
   {
@@ -125,7 +125,7 @@ const projects = [
     title: " Gaming Web UI",
     description:
       "Dive into gaming excellence with our sleek and immersive web interface. Trending titles, seamless navigation, and stunning visuals await, enhancing your gaming journey. Elevate your experience with an interface designed for both style and functionality.",
-    tech: ["Figma","JavaScript", "HTML", "CSS"],
+    tech: ["Figma", "JavaScript", "HTML", "CSS"],
     github: "https://github.com/SuwanthaDarshana/GameDevWeb",
     demo: "https://suwanthadarshana.github.io/GameDevWeb/#",
   },
@@ -134,7 +134,7 @@ const projects = [
 const social = {
   email: "suwanthadarshana@gmail.com",
   github: "https://github.com/SuwanthaDarshana",
-  linkedin: "https://www.linkedin.com/in/suwantha-darshana",
+  linkedin: "https://www.linkedin.com/in/suwantha-darshana-3b9856219",
 };
 
 const education = [
@@ -144,7 +144,7 @@ const education = [
     period: "2021 - 2025",
     details: "Focused on full-stack development, distributed systems, and secure software design.",
   },
-   {
+  {
     title: "Diploma in Cyber Security & Ethical Hacking",
     institution: "SITC Campus ",
     period: "2023",
@@ -166,7 +166,7 @@ export default function Home() {
         <Hero
           name="Suwantha Darshana"
           role="Software Engineer / Full Stack Developer"
-          // tagline="I architect and build end-to-end web platforms that balance performance, accessibility, and maintainability—shaping resilient systems that grow with the business."
+        // tagline="I architect and build end-to-end web platforms that balance performance, accessibility, and maintainability—shaping resilient systems that grow with the business."
         />
         <About summary={summary} />
         <Education items={education} />
