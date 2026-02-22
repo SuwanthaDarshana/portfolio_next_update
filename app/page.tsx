@@ -86,6 +86,14 @@ const skillCategories = [
 
 const projects = [
   {
+    title: "Mini Task Tracker",
+    description:
+      "A full-stack Task Tracker application featuring a Spring Boot 3 REST API backend with a modern dual-token authentication system and a React 19 frontend styled with Tailwind.",
+    tech: ["React", "Spring Boot", "MySQL", "Tailwind CSS"],
+    github: "https://github.com/SuwanthaDarshana/task-tracker",
+    demo: "https://task-tracker-green-three.vercel.app/",
+  },
+  {
     title: "Hotel management system",
     description:
       "Developed a full-stack hotel management system using Spring Boot, React, and MySQL to manage bookings, customers, and payments with secure authentication and scalable architecture.",
