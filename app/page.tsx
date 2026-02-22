@@ -86,7 +86,7 @@ const skillCategories = [
 
 const projects = [
   {
-    title: "Mini Task Tracker",
+    title: "Task Tracker",
     description:
       "A full-stack Task Tracker application featuring a Spring Boot 3 REST API backend with a modern dual-token authentication system and a React 19 frontend styled with Tailwind.",
     tech: ["React", "Spring Boot", "MySQL", "Tailwind CSS"],
