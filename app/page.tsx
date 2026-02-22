@@ -113,7 +113,7 @@ const projects = [
     title: "Multi-Modal Based Violent Content Detection of YouTube Sinhala Videos ",
     description:
       "Developed a system to analyze YouTube videos and comments to detect violent content using NLP and transformer-based models, integrating video, audio, and text data for improved classification accuracy.",
-    tech: ["React", "Spring Boot", "MySQL"],
+    tech: ["Python", "Flask", "PyTorch", "Hugging Face Transformers", "Scikit-learn"],
     github: "https://github.com/SuwanthaDarshana/youtube_comments_analyse",
     // demo: "https://devtasks.app",
   },
