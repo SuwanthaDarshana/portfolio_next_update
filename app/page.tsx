@@ -137,6 +137,14 @@ const projects = [
     github: "https://github.com/SuwanthaDarshana/GameDevWeb",
     demo: "https://suwanthadarshana.github.io/GameDevWeb/#",
   },
+  {
+    title: "EduManager — Learning Management System",
+    description:
+      "A full-stack Learning Management System built for educational institutions. Features an admin panel for managing students, courses, enrollments, and payments, and a student portal for browsing courses, tracking progress, viewing invoices, and receiving notifications. Deployed entirely on Cloudflare's free tier.",
+    tech: ["React", "TypeScript", "Tailwind CSS", "Redux", "Hono", "Cloudflare", "Drizzle ORM", "Stripe"],
+    github: "https://github.com/SuwanthaDarshana/learning-management-system",
+    demo: "https://edumanager.pages.dev",
+  },
 ];
 
 const social = {
