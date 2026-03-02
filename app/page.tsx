@@ -86,6 +86,14 @@ const skillCategories = [
 
 const projects = [
   {
+    title: "Mémoire entre Amis",
+    description:
+      "A private, invite-only photo and video sharing platform for university friends. Features secure authentication, client-side auto-compression, and a scalable architecture with Supabase and Cloudinary.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Cloudinary"],
+    github: "https://github.com/SuwanthaDarshana/memoire-entre-amis",
+    demo: "https://memoire-entre-amis.vercel.app",
+  },
+  {
     title: "Task Tracker",
     description:
       "A full-stack Task Tracker application featuring a Spring Boot 3 REST API backend with a modern dual-token authentication system and a React 19 frontend styled with Tailwind.",
