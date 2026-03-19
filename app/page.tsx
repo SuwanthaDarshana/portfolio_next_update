@@ -86,6 +86,13 @@ const skillCategories = [
 
 const projects = [
   {
+    title: "Inventory Management System",
+    description:
+      "Built an internal inventory management system for Ceyntics Systems to manage tools, products, and electronic components. Features role-based access control, a borrowing system with concurrency-safe database transactions, hierarchical storage management, and comprehensive audit logging.",
+    tech: ["React", "Laravel", "PostgreSQL", "Tailwind CSS", "TypeScript"],
+    github: "https://github.com/SuwanthaDarshana/inventory-system",
+  },
+  {
     title: "Mémoire entre Amis",
     description:
       "A private, invite-only photo and video sharing platform for university friends. Features secure authentication, client-side auto-compression, and a scalable architecture with Supabase and Cloudinary.",

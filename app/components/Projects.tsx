@@ -66,9 +66,9 @@ export function Projects({ projects }: ProjectsProps) {
                   <p className="mt-2 text-sm text-slate-600 dark:text-slate-200">{project.description}</p>
                 </div>
                 <div className="flex items-center gap-2 text-xs font-medium text-teal-600 dark:text-teal-200">
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-teal-400/50 bg-teal-500/10 dark:bg-teal-500/10">
+                  {/* <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-teal-400/50 bg-teal-500/10 dark:bg-teal-500/10">
                     {project.tech.length}
-                  </span>
+                  </span> */}
                 </div>
               </div>
 
