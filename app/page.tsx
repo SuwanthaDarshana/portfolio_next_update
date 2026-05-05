@@ -86,6 +86,13 @@ const skillCategories = [
 
 const projects = [
   {
+    title: "Full-Stack Hospital Management System",
+    description:
+      "Built a complete Hospital Management System using a microservices architecture with Spring Boot 3.x, featuring Auth, Doctor, Patient, Staff, Appointment, Billing, and Notification services. Implements role-based access control, event-driven communication via RabbitMQ for real-time patient and staff activation across services, secure API gateway with centralized JWT validation, and full Docker containerization.",
+    tech: ["Spring Boot", "React", "TypeScript", "Spring Cloud Gateway", "Eureka", "RabbitMQ", "JWT", "MySQL", "PostgreSQL", "Docker"],
+    github: "https://github.com/SuwanthaDarshana/hospital-management-system",
+  },
+  {
     title: "Inventory Management System",
     description:
       "Built an internal inventory management system for Ceyntics Systems to manage tools, products, and electronic components. Features role-based access control, a borrowing system with concurrency-safe database transactions, hierarchical storage management, and comprehensive audit logging.",
