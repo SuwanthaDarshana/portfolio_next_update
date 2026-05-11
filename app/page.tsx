@@ -72,6 +72,7 @@ const skillCategories = [
       { name: "PostgreSQL", icon: <SiPostgresql /> },
       { name: "MSSQL", icon: <DiMsqlServer /> },
       { name: "MongoDB", icon: <SiMongodb /> },
+      {name:"PostgreSQL", icon: <SiPostgresql />},
     ],
   },
   {
@@ -89,19 +90,12 @@ const skillCategories = [
 ];
 
 const projects = [
-  {
+   {
     title: "Full-Stack Hospital Management System",
     description:
       "Built a complete Hospital Management System using a microservices architecture with Spring Boot 3.x, featuring Auth, Doctor, Patient, Staff, Appointment, Billing, and Notification services. Implements role-based access control, event-driven communication via RabbitMQ for real-time patient and staff activation across services, secure API gateway with centralized JWT validation, and full Docker containerization.",
     tech: ["Spring Boot", "React", "TypeScript", "Spring Cloud Gateway", "Eureka", "RabbitMQ", "JWT", "MySQL", "PostgreSQL", "Docker"],
     github: "https://github.com/SuwanthaDarshana/hospital-management-system",
-  },
-  {
-    title: "Inventory Management System",
-    description:
-      "Built an internal inventory management system for Ceyntics Systems to manage tools, products, and electronic components. Features role-based access control, a borrowing system with concurrency-safe database transactions, hierarchical storage management, and comprehensive audit logging.",
-    tech: ["React", "Laravel", "PostgreSQL", "Tailwind CSS", "TypeScript"],
-    github: "https://github.com/SuwanthaDarshana/inventory-system",
   },
   {
     title: "Mémoire entre Amis",
@@ -110,6 +104,13 @@ const projects = [
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Cloudinary"],
     github: "https://github.com/SuwanthaDarshana/memoire-entre-amis",
     demo: "https://memoire-entre-amis.vercel.app",
+  },
+  {
+    title: "Inventory Management System",
+    description:
+      "Built an internal inventory management system for Ceyntics Systems to manage tools, products, and electronic components. Features role-based access control, a borrowing system with concurrency-safe database transactions, hierarchical storage management, and comprehensive audit logging.",
+    tech: ["React", "Laravel", "PostgreSQL", "Tailwind CSS", "TypeScript"],
+    github: "https://github.com/SuwanthaDarshana/Inventory-Management-System",
   },
   {
     title: "Task Tracker",
@@ -176,7 +177,7 @@ const projects = [
 const social = {
   email: "suwanthadarshana@gmail.com",
   github: "https://github.com/SuwanthaDarshana",
-  linkedin: "https://www.linkedin.com/in/suwantha-darshana-3b9856219",
+  linkedin: "https://www.linkedin.com/in/suwantha-darshana-3b9856219/",
 };
 
 const education = [
@@ -214,7 +215,7 @@ export default function Home() {
         <Education items={education} />
         <Skills categories={skillCategories} />
         <Projects projects={projects} />
-        <Contact email={social.email} />
+        <Contact email={social.email} github={social.github} linkedin={social.linkedin} />
       </main>
       <Footer {...social} />
     </div>

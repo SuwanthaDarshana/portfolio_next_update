@@ -12,9 +12,9 @@ type NavItem = {
 const navItems: NavItem[] = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
+  { label: "Education", href: "#education" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
-  // { label: "Contact", href: "#contact" },
 ];
 
 const Icon = ({ name }: { name: "menu" | "close" }) => {
@@ -24,16 +24,16 @@ const Icon = ({ name }: { name: "menu" | "close" }) => {
       <svg
         className={base}
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="22"
+        height="22"
         viewBox="0 0 24 24"
         fill="none"
         strokeWidth="1.5"
         aria-hidden
       >
         <path d="M4 7h16" />
-        <path d="M4 12h16" />
-        <path d="M4 17h16" />
+        <path d="M4 12h10" />
+        <path d="M4 17h13" />
       </svg>
     );
   }
@@ -42,8 +42,8 @@ const Icon = ({ name }: { name: "menu" | "close" }) => {
     <svg
       className={base}
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="22"
+      height="22"
       viewBox="0 0 24 24"
       fill="none"
       strokeWidth="1.5"
@@ -74,21 +74,27 @@ export function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ${isScrolled
-        ? "bg-white/80 dark:bg-slate-950/50 backdrop-blur-2xl shadow-xl border-slate-200 dark:border-white/10"
-        : "bg-transparent border-transparent"
-        }`}
+      className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ${
+        isScrolled
+          ? "bg-white/80 dark:bg-slate-950/50 backdrop-blur-2xl shadow-xl border-slate-200 dark:border-white/10"
+          : "bg-transparent border-transparent"
+      }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6">
+        {/* Logo */}
         <a
           href="#home"
           className="flex items-center gap-2 text-lg font-semibold text-slate-800 dark:text-slate-100 hover:text-teal-600 dark:hover:text-teal-300 transition-colors"
           aria-label="Suwantha Darshana home"
         >
-          <span className="h-3 w-3 rounded-full bg-teal-400 shadow-[0_0_12px_rgba(45,212,191,0.7)]" />
-          Suwantha Darshana
+          <span className="relative flex h-3 w-3">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal-400 opacity-40" />
+            <span className="relative inline-flex h-3 w-3 rounded-full bg-teal-400 shadow-[0_0_12px_rgba(45,212,191,0.7)]" />
+          </span>
+          <span>Suwantha Darshana</span>
         </a>
 
+        {/* Desktop nav */}
         <div className="hidden items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-200 md:flex">
           {navItems.map((item) => (
             <a
@@ -97,7 +103,7 @@ export function Navbar() {
               className="group relative py-1 transition-colors hover:text-teal-600 dark:hover:text-teal-300"
             >
               {item.label}
-              <span className="absolute inset-x-0 -bottom-1 h-0.5 origin-left scale-x-0 bg-teal-400 transition-transform duration-200 group-hover:scale-x-100" />
+              <span className="absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 rounded-full bg-teal-400 transition-transform duration-200 group-hover:scale-x-100" />
             </a>
           ))}
           <ThemeToggle />
@@ -109,6 +115,7 @@ export function Navbar() {
           </a>
         </div>
 
+        {/* Mobile: theme toggle + hamburger */}
         <div className="flex items-center gap-4 md:hidden">
           <ThemeToggle />
           <button
@@ -124,6 +131,7 @@ export function Navbar() {
         </div>
       </nav>
 
+      {/* Mobile menu */}
       {open && (
         <div
           id="mobile-menu"

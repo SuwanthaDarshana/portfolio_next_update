@@ -6,6 +6,12 @@ type AboutProps = {
   summary: string;
 };
 
+const stats = [
+  { value: "7+", label: "Projects Built" },
+  { value: "20+", label: "Technologies" },
+  { value: "2025", label: "Graduation Year" },
+];
+
 export function About({ summary }: AboutProps) {
   return (
     <section id="about" className="py-16 sm:py-20">
@@ -37,6 +43,18 @@ export function About({ summary }: AboutProps) {
         >
           {summary}
         </motion.p>
+
+        <div className="mt-8 grid grid-cols-3 gap-4 sm:gap-6 lg:max-w-sm">
+          {stats.map((stat) => (
+            <div
+              key={stat.label}
+              className="group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-white/10 bg-white/50 dark:bg-white/5 p-4 text-center shadow-lg backdrop-blur-md transition-all hover:-translate-y-0.5 hover:border-teal-400/50"
+            >
+              <p className="text-2xl font-extrabold text-teal-600 dark:text-teal-300">{stat.value}</p>
+              <p className="mt-1 text-xs font-medium text-slate-500 dark:text-slate-400">{stat.label}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

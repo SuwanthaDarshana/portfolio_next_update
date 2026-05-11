@@ -64,7 +64,7 @@ export function Education({ items }: EducationProps) {
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{item.title}</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-200">{item.institution}</p>
                 </div>
-                <span className="text-xs font-semibold uppercase tracking-[0.15em] text-teal-600 dark:text-teal-200">
+                <span className="text-xs font-semibold uppercase tracking-[0.15em] text-teal-600 dark:text-teal-200 whitespace-nowrap">
                   {item.period}
                 </span>
               </div>

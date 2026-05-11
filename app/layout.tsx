@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "./providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -76,8 +77,6 @@ export const metadata: Metadata = {
   category: "technology",
 };
 
-import { ThemeProvider } from "./providers";
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -88,11 +87,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background text-foreground antialiased selection:bg-teal-400 selection:text-slate-950`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-        >
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
         </ThemeProvider>
       </body>
