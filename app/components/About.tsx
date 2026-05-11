@@ -7,7 +7,7 @@ type AboutProps = {
 };
 
 const stats = [
-  { value: "7+", label: "Projects Built" },
+  { value: "12+", label: "Projects Built" },
   { value: "20+", label: "Technologies" },
   { value: "2025", label: "Graduation Year" },
 ];

@@ -72,7 +72,6 @@ const skillCategories = [
       { name: "PostgreSQL", icon: <SiPostgresql /> },
       { name: "MSSQL", icon: <DiMsqlServer /> },
       { name: "MongoDB", icon: <SiMongodb /> },
-      {name:"PostgreSQL", icon: <SiPostgresql />},
     ],
   },
   {
